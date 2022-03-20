@@ -120,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getWeatherInfo(String cityName){
-        String url = "http://api.weatherapi.com/v1/forecast.json?key=b8c31ce1d2a34c4ea9c162231221903&q="+ cityName +"&days=1&aqi=no&alerts=no";
+        String key = getString(R.string.api_key);
+        String url = "http://api.weatherapi.com/v1/forecast.json?key="+ key +"&q="+ cityName +"&days=1&aqi=no&alerts=no";
 
         cityNameTV.setText(cityName);
 
